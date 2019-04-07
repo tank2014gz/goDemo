@@ -2,12 +2,12 @@ package main
 
 import(
     "fmt"
-_)
+)
 
 
-func classChecker(items ... interface{}){
+func classChecker(items ...interface{}){
    for i,x:=range items{
-      switch x:=x.(type){
+      switch x:= x.(type) {
        case bool:
            fmt.Printf("param #%d is a bool,value: %t\n",i,x)
        case float32,float64:
@@ -17,11 +17,11 @@ func classChecker(items ... interface{}){
        case uint,uint8,uint32,uint16,uint64:
            fmt.Printf("param #%d is a uint,value: %d\n",i,x)
        case nil:
-           fmt.Printf("param #%d is a nil",i)
+           fmt.Printf("param #%d is a nil\n",i)
        case string:
            fmt.Printf("param #%d is a string,value: %s\n",i,x)
        default:
-           fmt.Printf("param #%d's type is unknown",i)
+           fmt.Printf("param #%d's type is unknown\n",i)
       }
    }
 }
